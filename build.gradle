@@ -1,0 +1,23 @@
+plugins {
+    id 'application'
+}
+
+group = 'vn.edu.it209'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+application {
+    mainClass = 'vn.edu.it209.App'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
